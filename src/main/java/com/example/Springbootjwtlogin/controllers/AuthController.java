@@ -1,8 +1,19 @@
 package com.example.Springbootjwtlogin.controllers;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import javax.validation.Valid;
+
 import com.example.Springbootjwtlogin.models.ERole;
 import com.example.Springbootjwtlogin.models.Role;
 import com.example.Springbootjwtlogin.models.User;
+import com.example.Springbootjwtlogin.payload.request.LoginRequest;
+import com.example.Springbootjwtlogin.payload.request.SignupRequest;
+import com.example.Springbootjwtlogin.payload.response.MessageResponse;
+import com.example.Springbootjwtlogin.payload.response.UserInfoResponse;
 import com.example.Springbootjwtlogin.repository.RoleRepository;
 import com.example.Springbootjwtlogin.repository.UserRepository;
 import com.example.Springbootjwtlogin.security.jwt.JwtUtils;
@@ -16,13 +27,12 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

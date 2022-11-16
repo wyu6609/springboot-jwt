@@ -17,7 +17,7 @@ GET	/api/test/mod	access Moderator’s content
 GET	/api/test/admin	access Admin’s content
 
 ## Project Structure
-![My Remote Image](https://www.bezkoder.com/wp-content/uploads/2022/01/spring-boot-security-login-example-jwt-project-structure.png)
+(https://www.bezkoder.com/wp-content/uploads/2022/01/spring-boot-security-login-example-jwt-project-structure.png)
 
 security: we configure Spring Security & implement Security Objects here.
 
